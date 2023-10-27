@@ -1,0 +1,8 @@
+@import './variables';
+.topNav{
+    position: relative;
+    height: 60px;
+    @include tablet-down{
+        display: none;
+    }
+}

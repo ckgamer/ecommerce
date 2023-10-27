@@ -1,0 +1,13 @@
+@import './variables';
+.nav{
+    height: 71px;
+.link{
+    color: white;
+    &:hover{
+        background-color: rgba(orange,0.2);
+    }
+    &.active{
+        background-color: rgba(orange,0.2);
+    }
+}
+}
