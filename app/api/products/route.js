@@ -14,11 +14,11 @@ export async function GET(request) {
 
     //     // Query for a movie that has the title 'Back to the Future'
     const query = {};
-    const movie = await movies.findOne(query);
-    const content = stringify(movie);
+    const movie = await movies.find(query).toArray();
+    // const content = stringify(movie);
     // console.log(request);
     console.log(movie);
-    return NextResponse.json({ content });
+    return NextResponse.json({ movie });
   } finally {
     //     // Ensures that the client will close when you finish/error
     await client.close();
