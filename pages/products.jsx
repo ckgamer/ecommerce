@@ -37,8 +37,47 @@ export default function Products() {
 
   return (
     <>
+      <div className="container my-6 mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Search Products</h2>
+        <div className="w-full flex">
+          <div className="mb-4 mr-6 w-full">
+            <label className="block mb-2 text-lg font-bold text-gray-700" htmlFor="searchTerm">
+              Search Term
+            </label>
+            <input
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              type="text"
+              id="searchTerm"
+              name="searchTerm"
+              placeholder="Enter search term"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </div>
+          <div className="mb-4">
+            <label className="block mb-2 text-lg font-bold text-gray-700" htmlFor="category">
+              Category
+            </label>
+            <select
+              className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
+              id="category"
+              name="category"
+            >
+              <option value="all">All Categories</option>
+              <option value="electronics">Product 1</option>
+              <option value="clothing">Product 2</option>
+              {/* Add more categories as needed */}
+            </select>
+          </div>
+        </div>
+        <button
+          className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
+          onClick={handleSearch}
+        >
+          Search
+        </button>
+      </div>
       <div className="container mx-auto">
-        <h2 className="text-3xl font-bold mb-4">Products</h2>
         <h2 className="text-2xl font-bold mb-4">Add a product</h2>
         <form onSubmit={handleAddProduct}>
           <label className="block mb-2 text-lg font-bold text-gray-700" htmlFor="productName">
@@ -97,45 +136,6 @@ export default function Products() {
             ))}
           </tbody>
         </table>
-      </div>
-      <div className="container my-6 mx-auto">
-        <h2 className="text-2xl font-bold mb-4">Search</h2>
-        <div className="mb-4">
-          <label className="block mb-2 text-lg font-bold text-gray-700" htmlFor="category">
-            Category
-          </label>
-          <select
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-            id="category"
-            name="category"
-          >
-            <option value="all">All Categories</option>
-            <option value="electronics">Product 1</option>
-            <option value="clothing">Product 2</option>
-            {/* Add more categories as needed */}
-          </select>
-        </div>
-
-        <div className="mb-4">
-          <label className="block mb-2 text-lg font-bold text-gray-700" htmlFor="searchTerm">
-            Search Term
-          </label>
-          <input
-            className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring focus:border-blue-300"
-            type="text"
-            id="searchTerm"
-            name="searchTerm"
-            placeholder="Enter search term"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-        <button
-          className="mt-4 px-6 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring focus:border-blue-300"
-          onClick={handleSearch}
-        >
-          Search
-        </button>
       </div>
     </>
   );
