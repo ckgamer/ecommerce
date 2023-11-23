@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function Index() {
   return (<>
     <h2>Api</h2>
-    <Link className='anchor' href='/api/products'>products</Link>
+    <Link className='anchor' href='/api/productsdb'>products</Link>
   </>
   )
 }
