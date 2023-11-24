@@ -18,7 +18,7 @@ export default function Products() {
     }
     fetchProducts()
 
-  }, [])
+  }, [searchTerm])
   const handleChange = (e) => {
     setproductForm({ ...productForm, [e.target.name]: e.target.value })
   }
