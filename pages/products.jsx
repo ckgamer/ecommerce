@@ -128,7 +128,11 @@ export default function Products() {
         </div>
         }
         {dropdown.map(item => {
-          return <div key={item.productName} className="bg-purple-100 mb-2 container text-center flex"><span className="productName w-1/3">{item.productName}</span> <span className="price w-1/3">{item.price}</span> <span className="price w-1/3">{item.quantity}</span> </div>
+          return <div key={item.productName} className="bg-purple-100 mb-2 container text-center flex">
+            <span className="productName w-1/3">{item.productName}</span>
+            <span className="price w-1/3">{item.price}</span>
+            <span className="price w-1/3">{item.quantity}</span>
+          </div>
         })}
       </div>
       <div className="container mx-auto">

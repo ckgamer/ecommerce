@@ -10,7 +10,7 @@ const TopHeader = () => {
     ];
 
     return (
-        <div className={`${Style["topNav"]} "mx-3 py-5 text-center"`}>
+        <div className={`${Style["topNav"]} mx-3 py-5 text-center lg:hidden`}>
             <div className="flex gap-3 flex-wrap justify-end">
                 <ul className="flex justify-end">
                     {items.map(({ icon, description }, index) => (
